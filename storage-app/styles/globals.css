@@ -1,0 +1,129 @@
+:root {
+  --background: #121212; /* Dark background */
+  --foreground: #e0e0e0; /* Light text color */
+  --primary-gradient: linear-gradient(45deg, #1f1f1f, #383838); /* Dark gradient */
+  --highlight-gradient: linear-gradient(45deg, #ff6f00, #ff8f00); /* Accent gradient */
+  --button-gradient: linear-gradient(45deg, #6a11cb, #2575fc); /* Button gradient */
+  --button-hover-gradient: linear-gradient(45deg, #2575fc, #6a11cb); /* Button hover gradient */
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  background: var(--primary-gradient);
+  color: var(--foreground);
+  text-align: center;
+  padding: 20px;
+  border-bottom: none;
+}
+
+header h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3 {
+  border: none;
+  background: none;
+}
+
+.ctas a.primary {
+  background: var(--highlight-gradient);
+  color: var(--background);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.ctas a.primary:hover {
+  background: #ff5e00;
+  transform: scale(1.05);
+}
+
+input, .input {
+  padding: 12px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  color: #e0e0e0;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, .input:focus {
+  border-color: #ff6f00;
+  outline: none;
+}
+
+.button {
+  background: var(--button-gradient);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background: var(--button-hover-gradient);
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+a {
+  color: #2575fc;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #6a11cb;
+  text-decoration: underline;
+}
+
+.footer {
+  background: var(--primary-gradient);
+  color: var(--foreground);
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #444;
+}
+
+.footer a {
+  color: #ff8f00;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@import './text-animations.css';

@@ -1,0 +1,65 @@
+.handwriting {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.text-slide {
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.button {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff6f00, #ff8f00);
+}
+
+.button:active {
+    transform: scale(0.9);
+    background: linear-gradient(45deg, #ff8f00, #ff6f00);
+}
+
+.header {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header:hover {
+    animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
